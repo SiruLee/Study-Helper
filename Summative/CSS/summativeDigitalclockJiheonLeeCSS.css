@@ -1,0 +1,240 @@
+@font-face{
+    font-family: Exo;
+    src:url("../fonts/Exo.ttf");
+}
+@font-face{
+    font-family: Digital;
+    src:url("../fonts/Digital.TTF");
+}
+
+html, body{
+    font-family: Exo;
+    font-variation-settings: 'wght' 800;
+    font-size: 20px;
+    height:100%;
+    margin:0;
+    background-color: rgb(235,235,235);
+    user-select: none;
+    position:relative;
+    overflow:hidden;
+}
+
+#nav{
+    display:flex;
+    background-color: #393939;
+    text-align: center;
+}
+#topbar{
+    z-index:999;
+    position:absolute;
+    width:100%;
+    top:-40px;
+    transition-duration: 0.8s;
+}
+#topbar:hover{
+    top:0;
+}
+#nav a{
+    display:inline-block;
+    font-variation-settings: 'wght' 350;
+    font-size:15.5px;
+    text-decoration:none;
+    padding:18px 0;
+    width:20%;
+    color:white;
+}
+#nav a:hover{
+    background-color: #111111;
+    top:0px;
+}
+
+#nav a:active{
+    background-color: white;
+    color: #111111;
+    font-variation-settings: 'wght' 500;
+}
+
+#menuIndicator{
+    font-variation-settings: 'wght' 650;
+    font-size:15px;
+    text-align: center;
+}
+
+#centerField{
+    width:100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+#clockBody, #stopwatchBody, #timerBody{
+    margin: 0 auto;
+    width: 55%;
+}
+#stopwatch, #timer{
+    display:none;
+}
+#menu{
+    display:flex;
+    justify-content: space-around;
+    width: 55%;
+    margin: 0 auto;
+}
+
+#menu button{
+    font-family: Exo;
+    font-variation-settings: 'wght' 800;
+    font-size: 20px;
+    background-color: transparent;
+    padding:10px;
+    border:none;
+    outline:none;
+}
+#Smenu, #Tmenu{
+    color:rgb(190,190,190);
+}
+
+.display{
+    overflow: auto;
+    background-color: rgb(221,221,221);
+    border: 7px rgb(214,214,214) solid;
+    border-radius: 10px;
+    margin:0 auto;
+    padding: 25px;
+    padding-bottom:0;
+    text-align: center;
+}
+.display::-webkit-scrollbar{
+    height:8px;
+}
+
+.display::-webkit-scrollbar-thumb{
+    background:black;
+    border-radius: 4px;
+}
+#day{
+    display:inline-flex;
+    justify-content: space-between;
+}
+#day div{
+    margin: 0 37px;
+    font-size:30px;
+}
+
+.clockMain{
+    display:inline-flex;
+}
+.clockMain div{
+    margin: 0 10px;
+}
+#clocktime, #stoptime, #timertime{
+    font-family: Digital;
+    font-size:230px;
+    display:inline-flex;
+}
+
+.clockdigit, .upperdigit, .timerdigit{
+    width:112.7px;
+    text-align:right;
+}
+.millidigit{
+    padding-top:120px;
+    font-size:100px;
+    widtH:49px;
+    text-align:right;
+}
+#alarm{
+    padding-top:160px;
+    filter:invert(0.74);
+}
+#AMPM{
+    font-size:30px;
+    padding-top:120px;
+}
+#stoptime, #timertime{
+    margin: 20px 0;
+}
+#timertime{
+    color:rgb(190,190,190);
+}
+.Buttons button{
+    font-family: Exo;
+    font-size: 15px;
+    font-variation-settings: 300;
+    width:70px;
+    padding:23px 0;
+    margin-left:15px;
+    border-radius: 35px;
+    outline:none;
+}
+#watchstart, #timerstart, #resume{
+    display:block;
+    margin-top:20px;
+    margin-bottom:60px;
+    background-color: rgba(103,206,103,0.7);
+    color:rgba(0, 0, 0, 0.6);
+}
+#timerstart{
+    background-color: rgba(103,206,103,0.3);
+}
+#resume{
+    display:none;
+}
+#watchstop, #timerstop, #stop{
+    display:none;
+    margin-top:20px;
+    margin-bottom:60px;
+    background-color: rgba(228, 94, 94, 0.7);
+    color:rgba(0, 0, 0, 0.6);
+}
+#stop{
+    margin-top:90px;
+}
+#reset, #cancel{
+    display:block;
+    background-color: rgba(255,255,255,0.7);
+    color:rgba(0, 0, 0, 0.6);
+
+}
+#watchstart:active, #timerstart:active, #resume:active{
+    margin-top:20px;
+    margin-bottom:60px;
+    background-color: rgba(103,206,103,0.3);
+}
+#watchstop:active, #timerstop:active{
+    background-color: rgba(228, 94, 94, 0.3);
+}
+#reset:active, #cancel:active{
+    background-color: rgba(255,255,255,0.3);
+}
+
+#timertime{
+    margin-right:20px;
+    position:relative;
+}
+#timertyper{
+    width:3px;
+    height:185px;
+    margin-top:25px;
+}
+#timerinput{
+    background-color: transparent;
+    color:transparent;
+    border:none;
+    outline:none;
+    pointer-events:none;
+    text-align: right;
+}
+#inputwrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor:text;
+}
+  
+#timerinput::-webkit-inner-spin-button,
+#timerinput::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+

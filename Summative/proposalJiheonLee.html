@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Proposal</title>
+        <link rel="stylesheet" href="CSS/summativeProposalJiheonLeeCSS.css">
+        <link rel="icon" type="image/png" href="IMG/LJHFavicon.png">
+    </head>
+    <body>
+        <div id="header">
+            <div id="hContainer">
+                <div id="nav">
+                    <a href="./proposalJiheonLee.html"><span>Proposal</span></a>
+                    <a href="./digitalclockJiheonLee.html"><span>Digital Clock</span></a>
+                    <a href="./flashcardsJiheonLee.html"><span>Flashcards</span></a>
+                    <a href="./todoJiheonLee.html"><span>ToDo List</span></a>
+                    <a href="./reflectionJiheonLee.html"><span>Reflection</span></a>
+                </div>
+            </div>
+        </div>
+        <div id="top">
+            <img id="background" src="img/mainBackground.jpg">
+            <div id="main">
+                <div id="title">
+                    <h1>Study Helper</h1>
+                    <p>Jiheon Lee</p>
+                </div>
+            </div>
+        </div>
+        <div id="content">
+            <h2><span>G O A L</span></h2>
+            <p>
+                The Study Helper contains three main functions to assist students' study life in a efficient and visual way.<br>
+                With the Digital Clock including a stopwatch and an alarm, it suggests an alternative timing tool instead of a phone.<br>
+                With the Flashcards, it efficiently helps students memorize various types of questions.<br>
+                With the ToDo List, it allows students organize their daily schedule and help planning tasks.
+            </p>
+            
+            <div id="squareboxes">
+                <div>
+                    <h3>Target User</h3>
+                    <p>1. Middle school or high school students who need to strengthen their study habit.</p>
+                    <p>2. Students preparing tests which has time limits</p>
+                    <p>3. Students who need to memorize vocabularies</p>
+                </div>
+                <div>
+                    <h3>Total Time</h3>
+                    <p id="time"><span id="two">2</span><br> <span id="weeks">weeks</span></p>
+                </div>
+            </div>
+            <h2><span>Folder Organization</span></h2>
+            <div class="imgContainer">
+                <img src="IMG/folderOrg.svg">
+            </div>
+            <h2><span>Program Hierarchical Chart</span></h2>
+            <div class="imgContainer">
+                <img src="IMG/hierarchy.svg">
+            </div>
+            <h2><span>Flowcharts</span></h2>
+            <h3 class="flowchartTitle">[Digital Clock]</h3>
+            <div class="sectionContainer">
+                <div class="section1">
+                    <img src="IMG/clockFlowchart.svg">
+                    <div class="texts">
+                        <h3>1. Real-Time Clock</h3>
+                        <p>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThis flowchart shows how the clock works.<br>
+                            Once the start button is clicked, the function will executed every 1 second.<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspIn the function, it first get the information of current day, hour, minute, and second.
+                            To format the hour which is in 24 hours, ut determines the period using the conditional and the remainder of hours divided by 12.
+                            Then, ut connects the strings of hours, minutes, and seconds to display on the clock.
+                            Lastly, it displays day and period on the clock.
+                        </p>
+                    </div>
+                </div>
+                <div class="section1">
+                    <img src="IMG/stopwatchFlowchart.svg">
+                    <div class="texts">
+                        <h3>2. Stopwatch</h3>
+                        <p>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThis flowchart shows the basic operation of the stopwatch.<br>
+                            Once the start button is clicked, it initialize an array of 8 digits, which is on the page.
+                            Then, the function is called every 10 milliseconds.<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWith a loop iterating the last 7 digits of the array, it checkes if any digit turns to 10.
+                            If so, it resets the digit to 0 and increases the next digit by 1.
+                            Similarly, the loop iterates from the tenth digit of seconds to the tenth digit of minutes to check if any digit turns to 6.
+                            If so, it resets the digit to 0 and increases the next digit by 1.
+                            After checking them, it increases the last digit, the oneth digit of millisecond, by 1 to make the stopwatch flow.
+                        </p>
+                    </div>
+                </div>
+                <div class="section1">
+                    <img src="IMG/alarmFlowchart.svg">
+                    <div class="texts">
+                        <h3>3. Alarm</h3>
+                        <p>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThis flowchart shows the basic operation of the alarm.<br>
+                            First, the program gets a string of a series of digits from user input.
+                            With this input, the function divides it into three parts - hours, minutes, and seconds.
+                            Then, it multiplies 3600 to the hours and 60 to the minutes to calculate the total seconds by adding the values.
+                            After determining the total seconds left, it calls the function every 1 second.<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspIn the function, the total seconds decreases by 1, and the function convert this total seconds into a six-digit string.
+                            Then, it displays the updated string on the page.
+                            Meanwhile, when the total seconds was calculated, it automatically countdowns and rings the alarm as well as flashes the background at last.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="flowchartTitle">[Flashcards]</h3>
+            <div class="sectionContainer">
+                <div class="section2">
+                    <img src="IMG/flashcardsAddFlowchart.svg">
+                    <div class="texts">
+                        <h3>1. Adding Cards</h3>
+                        <p>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThis flowchart shows how cards are added to flashcards.<br>
+                            When the user enter a question ans an answer, the function push the values in two arrays for questions and answers.<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThen, it increases the integer variable of total number of cards by 1 and changes the number of current card to show to the last number.
+                            For the next input, it resets the input fields and closes the element.
+                            Finally, it display the newly added card with the question and the answer stored in the arrays.
+                        </p>
+                    </div>
+                </div>
+                <div class="section2">
+                    <img src="IMG/flashcardsDeleteFlowchart.svg">
+                    <div class="texts">
+                        <h3>2. Deleting Cards</h3>
+                        <p>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThis flowchart shows how cards are deleted from flashcards.<br>
+                            First, the program goes through a conditional to check if the number of cards is greater than 0 (if there is at least one card).
+                            If it passes the condition, it deletes the question and the answer of currently displayed card from the arrays.
+                            Then, it decreases the total length of a sequence by 1. <br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspIf the current card was the last card, it decreases the current number by 1, which will be the number of the last card.
+                            If the total length is 0, which means there is no card left, it chooses a random emoji and display that there is no card.
+                            If not, it displays the current card with a question and updates the current page number and the total page number at the bottom of the page.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="flowchartTitle">[ToDo List]</h3>
+            <div>
+                <img id="todoFlow" src="IMG/todoAddFlowchart.svg" align="left" hspace="20">
+                <h3>Adding ToDo Items</h3>
+                <p id="todoTexts">
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThis flowchart shows how new items are added to the ToDo list.<br><br>
+                    When the 'plus' button is clicked, the program increases the variable of number of items by 1.
+                    Then, it calls the function to save the input values before updating HTML.<br><br>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspIn the following function, it initialize an empty array to store the values.
+                    After declaring variables to get elements of title, description, and checkbox from HTML, it starts a loop for the items in the ToDo List.
+                    For every items, the function push an array of values from input fields of title and description and the status of checkbox as a boolean into the array created earlier.<br><br>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThen, the program append the formatted HTML for an item to the container. Using a fade-in transition, it displays the new item in the list.
+                    Lastly, the program calls the function to overwrite the saved values on the initialized input fields of every item.
+                    This function also loops all the items in the list to write the value with the data collected in the array during the previous function.
+                    After it writes all the values of items, the program ends adding a new item.
+                </p>
+            </div>
+        </div>
+        <div id="footer">
+            <a href="#header">Go To Top</a>
+        </div>
+    </body>
+</html>

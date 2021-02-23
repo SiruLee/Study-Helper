@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Flashcards</title>
+        <link rel="stylesheet" href="CSS/summativeFlashcardsJiheonLeeCSS.css">
+        <link rel="icon" type="image/png" href="IMG/flashcardsFavicon.png">
+    </head>
+    <body>
+        <div id="topbar">
+            <div id="nav">
+                <a href="proposalJiheonLee.html">Proposal</a>
+                <a href="digitalclockJiheonLee.html">Digital Clock</a>
+                <a href="flashcardsJiheonLee.html">Flashcards</a>
+                <a href="todoJiheonLee.html">ToDo List</a>
+                <a href="reflectionJiheonLee.html">Reflection</a>
+            </div>
+            <div id="menuIndicator">Menu</div>
+        </div>
+        <div id="dim"></div>
+        <div id="board">
+            <div id="card">
+                <div onclick="flip()" id="display">
+                    <span class="content" id="cardContent"></span>
+                </div>
+                <div class="content">
+                    <span id="emoji">╰(*°▽°*)╯</span><br><span id="emptycard">Can't see any cards.</span>
+                </div>
+            </div>
+        </div>
+        <div id="adding">
+            <button onclick="closeWin()" id="close">×</button>
+            <form>
+                <div id="title">
+                    Add a new question
+                </div>
+                <div id="question">
+                    <label>Question:</label>
+                    <div class="container"><input id="questionInput" class="input" oninput="inputChange()" autocomplete="off" type="text" placeholder="Enter a question" required></div>
+                </div>
+
+                <div id="answer">
+                    <label>Answer:</label>
+                    <div class="container"><textarea  id="answerInput" class="input" oninput="inputChange()" autocomplete="off" type="text" placeholder="Answer" rows="7" required></textarea></div>
+                </div>
+            </form>
+            <button onclick="submit()" id="submit">Submit</button>
+        </div>
+        <div id="bottom">
+            <div id="page"><span id="curr_page">0</span>/<span id="total_page">0</span></div>
+            <div id="toolbar">
+                <button onclick="del()"><img src="IMG/trashcan.svg"></button>
+                <button onclick="previous()">&#10094</button>
+                <button onclick="next()">&#10095</button>
+                <button onclick="add()">+</button>
+            </div>
+        </div>
+        <script src="JS/flashcardsJiheonLeeJS.js"></script>
+    </body>
+</html>
